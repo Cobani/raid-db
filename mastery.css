@@ -1,0 +1,240 @@
+.bg{
+    background-image: url("images/bg.jpg");
+    background-repeat: no-repeat;
+    background-color: black;
+    position: absolute;
+    background-position-y: 30px;
+    top: 30px;
+}
+
+.wrapper{
+    width: 357px;
+    height: 558;
+    position: absolute;
+}
+
+.tree1{
+    top: 19pX;
+    left: 10px;
+}
+
+.tree2{
+    top: 19pX;
+    left: 378px;
+}
+
+.tree3{
+    top: 19pX;
+    left: 746px;
+}
+
+.icon{
+    position: absolute;
+    opacity: 0;
+}
+
+.icon.show, .icon:hover, .icon.show:hover{
+    position: absolute;
+    opacity: 1;
+}
+
+/* -------------------------------------Tool Tip Start--------------------------------------------- */
+
+#toolTip{
+    font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
+    display: inline-block;
+    background-color: rgb(8, 77, 112);
+    border: 2px solid goldenrod;
+    width: 350px;
+    height: auto;
+    padding: 0px 20px 10px;
+    margin: 0px;
+    position: fixed;
+}
+
+#toolTip *, #toolTip{
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    visibility: hidden;
+}
+
+#toolTip.show, #toolTip *.show{
+    visibility: visible;
+}
+
+#masteryName{
+    text-transform: uppercase;
+    color: rgb(247, 190, 46);
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 0px;
+}
+
+#smallIcon{
+    display: block;
+    max-width: 40px;
+    height: auto;
+    margin: 0px auto;
+}
+
+#rankText{
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    text-align: center;
+}
+
+#rankText i{
+    font-style: normal;
+    -webkit-text-fill-color: goldenrod;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    font-size: 16px;
+}
+
+#masteryDef{
+    color: white;
+    width: fit-content;
+    height: fit-content;
+    font-size: 13px;
+}
+
+.buff{
+    color: limegreen;
+    font-style: normal;
+    font-weight: bold;
+}
+
+#unlock{
+    color: goldenrod;
+    font-size: 14px;
+    /* font-weight: bolder; */
+    text-align: center;
+    margin-top: 10px;
+}
+
+#scroll{
+    vertical-align: middle;
+}
+/* -------------------------------------Tool Tip End--------------------------------------------- */
+
+/* Tier 1 */
+#icon0{
+    top: 86px;
+    left: 237px;
+}
+
+#icon1{
+    top: 86px;
+    left: 316px;
+}
+
+/* Tier 2 */
+#icon2{
+    top: 171px;
+    left: 157px;
+}
+
+#icon3{
+    top: 171px;
+    left: 237px;
+}
+
+#icon4{
+    top: 171px;
+    left: 316px;
+}
+
+#icon5{
+    top: 171px;
+    left: 395px;
+}
+
+/* Tier 3 */
+#icon6{
+    top: 256px;
+    left: 157px;
+}
+
+#icon7{
+    top: 256px;
+    left: 237px;
+}
+
+#icon8{
+    top: 256px;
+    left: 316px;
+}
+
+#icon9{
+    top: 256px;
+    left: 395px;
+}
+
+/* Tier 4 */
+#icon10{
+    top: 341px;
+    left: 157px;
+}
+
+#icon11{
+    top: 341px;
+    left: 237px;
+}
+
+#icon12{
+    top: 341px;
+    left: 316px;
+}
+
+#icon13{
+    top: 341px;
+    left: 395px;
+}
+
+/* Tier 5 */
+#icon14{
+    top: 426px;
+    left: 157px;
+}
+
+#icon15{
+    top: 426px;
+    left: 237px;
+}
+
+#icon16{
+    top: 426px;
+    left: 316px;
+}
+
+#icon17{
+    top: 426px;
+    left: 395px;
+}
+
+/* Tier 6 */
+#icon18{
+    top: 511px;
+    left: 157px;
+}
+
+#icon19{
+    top: 511px;
+    left: 237px;
+}
+
+#icon20{
+    top: 511px;
+    left: 316px;
+}
+
+#icon21{
+    top: 511px;
+    left: 395px;
+}
