@@ -25,10 +25,11 @@
 }
 
 
-.mastery:link, .mastery:visited, .mastery:active{
-    background-color: orangered;
-}
-
-.mastery:hover{
-    background-color: tomato;
-}
+.mastery{background-color: gold;}
+.mastery:hover{background-color: goldenrod;}
+.sixstar{background-color: cornflowerblue;}
+.sixstar:hover{background-color: royalblue;}
+.tier{background-color: mediumseagreen;}
+.tier:hover{background-color: seagreen;}
+.guide{background-color: coral;}
+.guide:hover{background-color: tomato;}
