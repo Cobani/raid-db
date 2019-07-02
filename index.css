@@ -1,0 +1,36 @@
+.container{
+    margin: auto;
+    text-align: center;
+    display: block;
+    position: relative;
+    padding: 50% 0px;
+    max-height: 100vh;
+}
+
+.button{
+    width: 250px;
+    display: block;
+    margin: 5px auto;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+.button:first-child{
+    border-radius: 5px 5px 0px 0px;
+}
+
+.button:last-child{
+    border-radius: 0px 0px 5px 5px;
+}
+
+
+.mastery:link, .mastery:visited, .mastery:active{
+    background-color: orangered;
+}
+
+.mastery:hover{
+    background-color: tomato;
+}
