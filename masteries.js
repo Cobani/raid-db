@@ -35,6 +35,48 @@ function btnClick(elem) {
     }
 }
 
+//------------------------------------- Set-Get-Erase Cookies ------------------------
+function saveBuild(){
+  document.cookie = "username=John Smith; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/";
+  var tree1 = btnStatusTree1.toString();
+  var tree2 = btnStatusTree2.toString();
+  var tree3 = btnStatusTree3.toString();
+
+  tree1 = '0';
+  document.cookie = "tree1=" + tree1;
+
+  setCookie("tree1", tree1, 1000);
+
+  alert(tree1);
+  alert(getCookie("username"));
+}
+
+function setCookie(name,value,days) {
+  var expires = "";
+  if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + (days*24*60*60*1000));
+      expires = "; expires=" + date.toUTCString();
+  }
+  document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+}
+
+function getCookie(name) {
+  var nameEQ = name + "=";
+  var ca = document.cookie.split(';');
+  for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+  }
+  return null;
+}
+
+function eraseCookie(name) {   
+  document.cookie = name+'=; Max-Age=-99999999;';  
+}
+
+//------------------------------------- Set-Get-Erase Cookies End------------------------
 
 function showDesc(elem, event){
 

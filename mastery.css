@@ -3,8 +3,19 @@
     background-repeat: no-repeat;
     background-color: black;
     position: absolute;
-    background-position-y: 30px;
-    top: 30px;
+}
+
+#saveButton{
+    font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
+    background-color: darkgreen;
+    position: absolute;
+    padding: 5px 15px;
+    border: none;
+    display: inline-block;
+    width: 150px;
+    top: -1px;
+    text-align: center;
+    left: 950px;
 }
 
 .wrapper{
