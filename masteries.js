@@ -37,30 +37,73 @@ function btnClick(elem) {
 
 //------------------------------------- Set-Get-Erase Cookies ------------------------
 function saveBuild(){
+  //listede var mı kontrol et
+  //yoksa listeye ekle
+  //sonra profili localStorage olarak sakla
 
-  if(localStorage.getItem("raidSavedMasteries")){
-    var allProfiles = localStorage.getItem("raidSavedMasteries").split(',');
-  }else{
-    continue;
-  }
+  // Get input name
+  var newBuild = document.getElementById("championname").value;
+
+  // add to build list
+  addBuildList(newBuild);
   
-  var newProfile = document.getElementById("championname").innerText;
-  alert(newProfile + ' isimli profil saklandı');
-
+  // store build
   var tree1 = btnStatusTree1.toString();
   var tree2 = btnStatusTree2.toString();
   var tree3 = btnStatusTree3.toString();
 
-  localStorage.setItem( newProfile + '1', tree1 );
-  localStorage.setItem( newProfile + '2', tree2 );
-  localStorage.setItem( newProfile + '3', tree3 );
+  localStorage.setItem( newBuild + '1', tree1 );
+  localStorage.setItem( newBuild + '2', tree2 );
+  localStorage.setItem( newBuild + '3', tree3 );
+}
+
+function addBuildList(buildname){
+  // check if there is already saved profiles before
+  // If there is then add new profile to the list and check if entered value is already in the list
+  // else create profile list
+  if(localStorage.getItem("raidSavedMasteries") === null){
+    //store new build
+    localStorage.setItem("raidSavedMasteries", buildname);
+    alert(buildname + ' isimli profil saklandı');
+  }
+  else{
+    // get all build list
+    var allBuilds = localStorage.getItem("raidSavedMasteries").split(',');
+
+    for(i=0; i < allBuilds.length; i++){
+      // exit if there is already a build with same name
+      if( newBuild === allBuilds[i]){break;}
+      // add new build to the build list
+      if(allBuilds.length === i ){
+        allBuilds.push(newBuild);
+      }
+    }
+    // store all builds list
+    localStorage.setItem("raidSavedMasteries", allBuilds);
+    alert(newBuild + ' isimli profil eklendi');
+  }
 }
 
 function loadBuild(){
-  var tree1 = localStorage.getItem("tree1").split(',');
-  
-  btnStatusTree1 = tree1;
+
+  //load ekranını aç
+  //kayıtlı build listesini al
+  //kayıtlı build listesini tablo/liste olarak göster
+  //seçimi algıla
+  //seçimi uygula
+
+  if(localStorage.getItem("raidSavedMasteries") !== null ){
+    var allBuilds = localStorage.getItem("raidSavedMasteries").split(',');
+    alert(allBuilds.toString());
+  }
 }
+
+function clearBuild(){
+  //tıklanan buildi bul
+  //tıklanan buildi sil
+
+}
+
 
 //------------------------------------- Set-Get-Erase Cookies End------------------------
 
@@ -436,7 +479,7 @@ var mastery = [
         name: "Wisdom of Battle",
         tier: 3,
         desc:
-          "Has a 30% chance of placing a [Block Debuffs] buff on this Champion for 1 turn when <i class='buff'>[Stun]</i>, <i class='buff'>[Sleep]</i> or <i class='buff'>[Freeze]</i> debuffs expire on this Champion. ",
+          "Has a 30% chance of placing a <i class='buff'>[Block Debuffs]</i> buff on this Champion for 1 turn when <i class='buff'>[Stun]</i>, <i class='buff'>[Sleep]</i> or <i class='buff'>[Freeze]</i> debuffs expire on this Champion. ",
         tree: 2,
         iconNo: 9,
         scrollType: scrollType(this.tier),
@@ -510,7 +553,7 @@ var mastery = [
       {
         name: "Deterrence",
         tier: 5,
-        desc:"Has a 20% chance to counterattack an enemy when they apply a [Stun], [Sleep], or [Freeze] debuff on an ally.",
+        desc:"Has a 20% chance to counterattack an enemy when they apply a <i class='buff'>[Stun]</i>, <i class='buff'>[Sleep]</i>, or <i class='buff'>[Freeze]</i> debuff on an ally.",
         tree: 2,
         iconNo: 17,
         scrollType: scrollType(this.tier),
@@ -583,7 +626,7 @@ var mastery = [
       {
         name: "Shieldbearer",
         tier: 2,
-        desc: "Increases the value of [Shield] buffs this Champion casts by 5%.",
+        desc: "Increases the value of <i class='buff'>[Shield]</i> buffs this Champion casts by 5%.",
         tree: 3,
         iconNo: 3,
         scrollType: scrollType(this.tier),
@@ -648,7 +691,7 @@ var mastery = [
         name: "Merciful Aid",
         tier: 4,
         desc:
-          "Increases the amount of healing and the value of [Shield] buffs placed by this Champion by 15% if the target ally has [Stun], [Sleep], or [Freeze] debuffs.",
+          "Increases the amount of healing and the value of <i class='buff'>[Shield]</i> buffs placed by this Champion by 15% if the target ally has <i class='buff'>[Stun]</i>, <i class='buff'>[Sleep]</i>, or <i class='buff'>[Freeze]</i> debuffs.",
         tree: 3,
         iconNo: 10,
         scrollType: scrollType(this.tier),
@@ -715,7 +758,7 @@ var mastery = [
         name: "Master Hexer",
         tier: 5,
         desc:
-          "Has a 30% chance to extend the duration of any debuff cast by this Champion by 1 turn. It will not extend [Stun], [Sleep], [Freeze] or [Provoke] debuffs.",
+          "Has a 30% chance to extend the duration of any debuff cast by this Champion by 1 turn. It will not extend <i class='buff'>[Stun]</i>, <i class='buff'>[Sleep]</i>, <i class='buff'>[Freeze]</i> or <i class='buff'>[Provoke]</i> debuffs.",
         tree: 3,
         iconNo: 17,
         scrollType: scrollType(this.tier),

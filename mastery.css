@@ -17,6 +17,20 @@
     text-align: center;
     left: 950px;
 }
+
+#loadButton{
+    font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
+    background-color: darkgreen;
+    position: absolute;
+    padding: 5px 15px;
+    border: none;
+    display: inline-block;
+    width: 150px;
+    top: -1px;
+    text-align: center;
+    left: 1150px;
+}
+
 #championname, #championname:active{
     font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
     font-size: 15px;
