@@ -92,16 +92,23 @@ function loadBuild(){
   //seçimi algıla
   //seçimi uygula
 
-  if(localStorage.getItem("raidSavedMasteries") !== null ){
-    var allBuilds = localStorage.getItem("raidSavedMasteries").split(',');
-    alert(allBuilds.toString());
-  }
+  // Open build selection screen
+  document.getElementById("loadScreen").classList.add("show");
+
+  var allBuilds = localStorage.getItem("raidSavedMasteries");
+
+  
+
 }
 
 function clearBuild(){
   //tıklanan buildi bul
   //tıklanan buildi sil
 
+}
+
+function closeLoadBuilds(){
+  document.getElementById("loadScreen").classList.remove("show");
 }
 
 

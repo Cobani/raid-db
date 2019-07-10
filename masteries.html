@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="mastery.css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     </head>
-<body class="bg" onload="loadBuild()">
+<body class="bg">
 
     <input id="championname" type="text" name="champion" placeholder="Enter a champion name">
     <a id="saveButton" onclick="saveBuild()">Save Build</a>
@@ -99,6 +99,13 @@
     </p>
     <p id="unlock">30 X Unlock</p>
 </div>
+
+<div class="flexContainer" id="loadScreen">
+    <div id="loadBuilds">
+        <button onclick="closeLoadBuilds()">Cancel</button>
+    </div>
+</div>
+
 
 </body>
 
