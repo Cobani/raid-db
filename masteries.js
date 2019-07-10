@@ -37,16 +37,29 @@ function btnClick(elem) {
 
 //------------------------------------- Set-Get-Erase Cookies ------------------------
 function saveBuild(){
-  document.cookie = "username=John Smith; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/";
+
+  if(localStorage.getItem("raidSavedMasteries")){
+    var allProfiles = localStorage.getItem("raidSavedMasteries").split(',');
+  }else{
+    continue;
+  }
+  
+  var newProfile = document.getElementById("championname").innerText;
+  alert(newProfile + ' isimli profil saklandı');
+
   var tree1 = btnStatusTree1.toString();
   var tree2 = btnStatusTree2.toString();
   var tree3 = btnStatusTree3.toString();
 
-  localStorage.setItem("tree1", tree1);
-  localStorage.setItem("tree2", tree2);
-  localStorage.setItem("tree3", tree3);
-  alert(localStorage.getItem("tree1"));
+  localStorage.setItem( newProfile + '1', tree1 );
+  localStorage.setItem( newProfile + '2', tree2 );
+  localStorage.setItem( newProfile + '3', tree3 );
+}
 
+function loadBuild(){
+  var tree1 = localStorage.getItem("tree1").split(',');
+  
+  btnStatusTree1 = tree1;
 }
 
 //------------------------------------- Set-Get-Erase Cookies End------------------------
