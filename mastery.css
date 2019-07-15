@@ -1,62 +1,58 @@
-.bg{
-    background-image: url("images/bg.png");
-    background-repeat: no-repeat;
-    background-color: black;
-    position: absolute;
+body {
+    margin: 0;
 }
 
-#saveButton{
+.bg {
+    background: url("images/bg.png") 0 0 no-repeat;
+    position: relative;
+    width: 1366px;
+    height: 631px;
+    margin: 0px auto;
+
+    /* display: flex;
+    justify-content: center; */
+}
+
+.topBtn {
     font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
-    background-color: darkgreen;
-    position: absolute;
+    background-color: goldenrod;
+    position: relative;
     padding: 5px 15px;
     border: none;
     display: inline-block;
     width: 150px;
-    top: -1px;
+    top: 5px;
     text-align: center;
-    left: 950px;
+    left: 600px;
 }
 
-#loadButton{
-    font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
-    background-color: darkgreen;
-    position: absolute;
-    padding: 5px 15px;
-    border: none;
-    display: inline-block;
-    width: 150px;
-    top: -1px;
-    text-align: center;
-    left: 1150px;
-}
-
-#championname, #championname:active{
+#championname,
+#championname:active {
     font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
     font-size: 15px;
     background-color: transparent;
     color: rgb(247, 190, 46);
     width: 250px;
-    position: absolute;
-    top: -1px;
+    position: relative;
+    top: 5px;
     left: 500px;
     text-align: center;
     border: none;
     padding: 5px 0px;
 }
 
-#loadBuilds{
+#loadBuilds {
     font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
     font-size: 15px;
     background-color: white;
     width: 60vw;
     height: 50vh;
-    border: 1px solid black;
+    border: 2px solid black;
     z-index: 102;
     opacity: 1;
 }
 
-.flexContainer{
+.flexContainer {
     top: 0px;
     left: 0px;
     position: fixed;
@@ -67,47 +63,50 @@
     width: 100vw;
     visibility: hidden;
     z-index: 101;
-    background-color: rgba(0, 0, 0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-.flexContainer.show{
+.flexContainer.show {
     visibility: visible;
 }
 
-.wrapper{
+.wrapper {
     width: 357px;
-    height: 558;
-    position: absolute;
+    height: 558px;
+    position: relative;
+    display: inline-block;
 }
 
-.tree1{
-    top: 19pX;
-    left: 10px;
+.tree1 {
+    top: -4px;
+    left: 18px;
 }
 
-.tree2{
-    top: 19pX;
-    left: 378px;
+.tree2 {
+    top: -4px;
+    left: 25px;
 }
 
-.tree3{
-    top: 19pX;
-    left: 746px;
+.tree3 {
+    top: -4px;
+    left: 32px;
 }
 
-.icon{
+.icon {
     position: absolute;
     opacity: 0;
 }
 
-.icon.show, .icon:hover, .icon.show:hover{
+.icon.show,
+.icon:hover,
+.icon.show:hover {
     position: absolute;
     opacity: 1;
 }
 
 /* -------------------------------------Tool Tip Start--------------------------------------------- */
 
-#toolTip{
+#toolTip {
     font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
     display: inline-block;
     background-color: rgb(8, 77, 112);
@@ -119,7 +118,8 @@
     position: fixed;
 }
 
-#toolTip *, #toolTip{
+#toolTip *,
+#toolTip {
     margin-block-start: 0px;
     margin-block-end: 0px;
     margin-inline-start: 0px;
@@ -127,11 +127,12 @@
     visibility: hidden;
 }
 
-#toolTip.show, #toolTip *.show{
+#toolTip.show,
+#toolTip *.show {
     visibility: visible;
 }
 
-#masteryName{
+#masteryName {
     text-transform: uppercase;
     color: rgb(247, 190, 46);
     text-align: center;
@@ -139,14 +140,14 @@
     padding: 10px 0px;
 }
 
-#smallIcon{
+#smallIcon {
     display: block;
     max-width: 40px;
     height: auto;
     margin: 0px auto;
 }
 
-#rankText{
+#rankText {
     color: white;
     margin-left: auto;
     margin-right: auto;
@@ -156,7 +157,7 @@
     text-align: center;
 }
 
-#rankText i{
+#rankText i {
     font-style: normal;
     -webkit-text-fill-color: goldenrod;
     -webkit-text-stroke-width: 1px;
@@ -164,20 +165,20 @@
     font-size: 16px;
 }
 
-#masteryDef{
+#masteryDef {
     color: white;
     width: fit-content;
     height: fit-content;
     font-size: 13px;
 }
 
-.buff{
+.buff {
     color: limegreen;
     font-style: normal;
     font-weight: bold;
 }
 
-#unlock{
+#unlock {
     color: goldenrod;
     font-size: 14px;
     /* font-weight: bolder; */
@@ -185,123 +186,124 @@
     margin-top: 10px;
 }
 
-#scroll{
+#scroll {
     vertical-align: middle;
 }
+
 /* -------------------------------------Tool Tip End--------------------------------------------- */
 
 /* Tier 1 */
-#icon0{
+#icon0 {
     top: 86px;
     left: 237px;
 }
 
-#icon1{
+#icon1 {
     top: 86px;
     left: 316px;
 }
 
 /* Tier 2 */
-#icon2{
+#icon2 {
     top: 171px;
     left: 157px;
 }
 
-#icon3{
+#icon3 {
     top: 171px;
     left: 237px;
 }
 
-#icon4{
+#icon4 {
     top: 171px;
     left: 316px;
 }
 
-#icon5{
+#icon5 {
     top: 171px;
     left: 395px;
 }
 
 /* Tier 3 */
-#icon6{
+#icon6 {
     top: 256px;
     left: 157px;
 }
 
-#icon7{
+#icon7 {
     top: 256px;
     left: 237px;
 }
 
-#icon8{
+#icon8 {
     top: 256px;
     left: 316px;
 }
 
-#icon9{
+#icon9 {
     top: 256px;
     left: 395px;
 }
 
 /* Tier 4 */
-#icon10{
+#icon10 {
     top: 341px;
     left: 157px;
 }
 
-#icon11{
+#icon11 {
     top: 341px;
     left: 237px;
 }
 
-#icon12{
+#icon12 {
     top: 341px;
     left: 316px;
 }
 
-#icon13{
+#icon13 {
     top: 341px;
     left: 395px;
 }
 
 /* Tier 5 */
-#icon14{
+#icon14 {
     top: 426px;
     left: 157px;
 }
 
-#icon15{
+#icon15 {
     top: 426px;
     left: 237px;
 }
 
-#icon16{
+#icon16 {
     top: 426px;
     left: 316px;
 }
 
-#icon17{
+#icon17 {
     top: 426px;
     left: 395px;
 }
 
 /* Tier 6 */
-#icon18{
+#icon18 {
     top: 511px;
     left: 157px;
 }
 
-#icon19{
+#icon19 {
     top: 511px;
     left: 237px;
 }
 
-#icon20{
+#icon20 {
     top: 511px;
     left: 316px;
 }
 
-#icon21{
+#icon21 {
     top: 511px;
     left: 395px;
 }
