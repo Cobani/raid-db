@@ -13,6 +13,10 @@ body {
     justify-content: center; */
 }
 
+#topContent{
+    height: 60px;
+}
+
 .topBtn {
     font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
     background-color: goldenrod;
@@ -70,26 +74,20 @@ body {
     visibility: visible;
 }
 
-.wrapper {
+#treeWrapper{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    left: 14px;
+
+}
+
+.treeBox {
     width: 357px;
     height: 558px;
     position: relative;
     display: inline-block;
-}
-
-.tree1 {
-    top: -4px;
-    left: 18px;
-}
-
-.tree2 {
-    top: -4px;
-    left: 25px;
-}
-
-.tree3 {
-    top: -4px;
-    left: 32px;
+    margin: 0px 6px;
 }
 
 .icon {
@@ -194,116 +192,116 @@ body {
 
 /* Tier 1 */
 #icon0 {
-    top: 86px;
-    left: 237px;
+    top: 53px;
+    left: 104px;
 }
 
 #icon1 {
-    top: 86px;
-    left: 316px;
+    top: 53px;
+    left: 183px;
 }
 
 /* Tier 2 */
 #icon2 {
-    top: 171px;
-    left: 157px;
+    top: 138px;
+    left: 25px;
 }
 
 #icon3 {
-    top: 171px;
-    left: 237px;
+    top: 138px;
+    left: 104px;
 }
 
 #icon4 {
-    top: 171px;
-    left: 316px;
+    top: 138px;
+    left: 183px;
 }
 
 #icon5 {
-    top: 171px;
-    left: 395px;
+    top: 138px;
+    left: 263px;
 }
 
 /* Tier 3 */
 #icon6 {
-    top: 256px;
-    left: 157px;
+    top: 223px;
+    left: 25px;
 }
 
 #icon7 {
-    top: 256px;
-    left: 237px;
+    top: 223px;
+    left: 104px;
 }
 
 #icon8 {
-    top: 256px;
-    left: 316px;
+    top: 223px;
+    left: 183px;
 }
 
 #icon9 {
-    top: 256px;
-    left: 395px;
+    top: 223px;
+    left: 263px;
 }
 
 /* Tier 4 */
 #icon10 {
-    top: 341px;
-    left: 157px;
+    top: 308px;
+    left: 25px;
 }
 
 #icon11 {
-    top: 341px;
-    left: 237px;
+    top: 308px;
+    left: 104px;
 }
 
 #icon12 {
-    top: 341px;
-    left: 316px;
+    top: 308px;
+    left: 183px;
 }
 
 #icon13 {
-    top: 341px;
-    left: 395px;
+    top: 308px;
+    left: 263px;
 }
 
 /* Tier 5 */
 #icon14 {
-    top: 426px;
-    left: 157px;
+    top: 393px;
+    left: 25px;
 }
 
 #icon15 {
-    top: 426px;
-    left: 237px;
+    top: 393px;
+    left: 104px;
 }
 
 #icon16 {
-    top: 426px;
-    left: 316px;
+    top: 393px;
+    left: 183px;
 }
 
 #icon17 {
-    top: 426px;
-    left: 395px;
+    top: 393px;
+    left: 263px;
 }
 
 /* Tier 6 */
 #icon18 {
-    top: 511px;
-    left: 157px;
+    top: 478px;
+    left: 25px;
 }
 
 #icon19 {
-    top: 511px;
-    left: 237px;
+    top: 478px;
+    left: 104px;
 }
 
 #icon20 {
-    top: 511px;
-    left: 316px;
+    top: 478px;
+    left: 183px;
 }
 
 #icon21 {
-    top: 511px;
-    left: 395px;
+    top: 478px;
+    left: 263px;
 }
