@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    background-color: rgb(12, 49, 55);
 }
 
 .bg {
@@ -8,7 +9,6 @@ body {
     width: 1366px;
     height: 631px;
     margin: 0px auto;
-
     /* display: flex;
     justify-content: center; */
 }
