@@ -1,113 +1,191 @@
 <!doctype html>
 <html>
-    <head>
-        <title>
-            RAID Masteries
-        </title>
-        <link rel="stylesheet" href="mastery.css">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-    </head>
-<body class="bg">
 
-    <input id="championname" type="text" name="champion" placeholder="Enter a champion name">
-    <a id="saveButton" onclick="saveBuild()">Save Build</a>
-    <a id="loadButton" onclick="loadBuild()">Load Build</a>
+<head>
+    <title>
+        RAID Masteries
+    </title>
+    <link rel="stylesheet" href="mastery.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
 
-<div class="wrapper tree1">
-    <img id="icon0" class="icon" src="images/t1-0.png" alt="t1-0" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon1" class="icon" src="images/t1-1.png" alt="t1-1" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon2" class="icon" src="images/t1-2.png" alt="t1-2" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon3" class="icon" src="images/t1-3.png" alt="t1-3" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon4" class="icon" src="images/t1-4.png" alt="t1-4" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon5" class="icon" src="images/t1-5.png" alt="t1-5" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon6" class="icon" src="images/t1-6.png" alt="t1-6" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon7" class="icon" src="images/t1-7.png" alt="t1-7" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon8" class="icon" src="images/t1-8.png" alt="t1-8" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon9" class="icon" src="images/t1-9.png" alt="t1-9" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon10" class="icon" src="images/t1-10.png" alt="t1-10" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon11" class="icon" src="images/t1-11.png" alt="t1-11" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon12" class="icon" src="images/t1-12.png" alt="t1-12" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon13" class="icon" src="images/t1-13.png" alt="t1-13" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon14" class="icon" src="images/t1-14.png" alt="t1-14" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon15" class="icon" src="images/t1-15.png" alt="t1-15" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon16" class="icon" src="images/t1-16.png" alt="t1-16" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon17" class="icon" src="images/t1-17.png" alt="t1-17" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon18" class="icon" src="images/t1-18.png" alt="t1-18" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon19" class="icon" src="images/t1-19.png" alt="t1-19" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon20" class="icon" src="images/t1-20.png" alt="t1-20" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon21" class="icon" src="images/t1-21.png" alt="t1-21" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-</div>
+<body>
+    <div class="bg">
+        <div id="topContent">
+            <input id="championname" type="text" name="champion" placeholder="Enter a champion name">
+            <a class="topBtn" id="saveButton" onclick="saveBuild()">Save Build</a>
+            <a class="topBtn" id="loadButton" onclick="loadBuild()">Load Build</a>
 
-<div class="wrapper tree2">
-    <img id="icon0" class="icon" src="images/t2-0.png" alt="t2-0" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon1" class="icon" src="images/t2-1.png" alt="t2-1" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon2" class="icon" src="images/t2-2.png" alt="t2-2" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon3" class="icon" src="images/t2-3.png" alt="t2-3" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon4" class="icon" src="images/t2-4.png" alt="t2-4" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon5" class="icon" src="images/t2-5.png" alt="t2-5" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon6" class="icon" src="images/t2-6.png" alt="t2-6" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon7" class="icon" src="images/t2-7.png" alt="t2-7" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon8" class="icon" src="images/t2-8.png" alt="t2-8" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon9" class="icon" src="images/t2-9.png" alt="t2-9" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon10" class="icon" src="images/t2-10.png" alt="t2-10" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon11" class="icon" src="images/t2-11.png" alt="t2-11" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon12" class="icon" src="images/t2-12.png" alt="t2-12" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon13" class="icon" src="images/t2-13.png" alt="t2-13" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon14" class="icon" src="images/t2-14.png" alt="t2-14" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon15" class="icon" src="images/t2-15.png" alt="t2-15" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon16" class="icon" src="images/t2-16.png" alt="t2-16" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon17" class="icon" src="images/t2-17.png" alt="t2-17" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon18" class="icon" src="images/t2-18.png" alt="t2-18" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon19" class="icon" src="images/t2-19.png" alt="t2-19" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon20" class="icon" src="images/t2-20.png" alt="t2-20" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon21" class="icon" src="images/t2-21.png" alt="t2-21" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-</div>
+        </div>
 
-<div class="wrapper tree3">
-    <img id="icon0" class="icon" src="images/t3-0.png" alt="t3-0" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon1" class="icon" src="images/t3-1.png" alt="t3-1" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon2" class="icon" src="images/t3-2.png" alt="t3-2" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon3" class="icon" src="images/t3-3.png" alt="t3-3" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon4" class="icon" src="images/t3-4.png" alt="t3-4" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon5" class="icon" src="images/t3-5.png" alt="t3-5" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon6" class="icon" src="images/t3-6.png" alt="t3-6" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon7" class="icon" src="images/t3-7.png" alt="t3-7" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon8" class="icon" src="images/t3-8.png" alt="t3-8" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon9" class="icon" src="images/t3-9.png" alt="t3-9" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon10" class="icon" src="images/t3-10.png" alt="t3-10" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon11" class="icon" src="images/t3-11.png" alt="t3-11" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon12" class="icon" src="images/t3-12.png" alt="t3-12" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon13" class="icon" src="images/t3-13.png" alt="t3-13" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon14" class="icon" src="images/t3-14.png" alt="t3-14" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon15" class="icon" src="images/t3-15.png" alt="t3-15" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon16" class="icon" src="images/t3-16.png" alt="t3-16" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon17" class="icon" src="images/t3-17.png" alt="t3-17" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon18" class="icon" src="images/t3-18.png" alt="t3-18" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon19" class="icon" src="images/t3-19.png" alt="t3-19" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon20" class="icon" src="images/t3-20.png" alt="t3-20" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-    <img id="icon21" class="icon" src="images/t3-21.png" alt="t3-21" onclick="btnClick(this)" onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
-</div>
+        <div id="treeWrapper">
+            <div class="treeBox tree1">
+                <img id="icon0" class="icon" src="images/t1-0.png" alt="t1-0" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon1" class="icon" src="images/t1-1.png" alt="t1-1" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon2" class="icon" src="images/t1-2.png" alt="t1-2" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon3" class="icon" src="images/t1-3.png" alt="t1-3" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon4" class="icon" src="images/t1-4.png" alt="t1-4" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon5" class="icon" src="images/t1-5.png" alt="t1-5" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon6" class="icon" src="images/t1-6.png" alt="t1-6" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon7" class="icon" src="images/t1-7.png" alt="t1-7" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon8" class="icon" src="images/t1-8.png" alt="t1-8" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon9" class="icon" src="images/t1-9.png" alt="t1-9" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon10" class="icon" src="images/t1-10.png" alt="t1-10" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon11" class="icon" src="images/t1-11.png" alt="t1-11" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon12" class="icon" src="images/t1-12.png" alt="t1-12" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon13" class="icon" src="images/t1-13.png" alt="t1-13" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon14" class="icon" src="images/t1-14.png" alt="t1-14" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon15" class="icon" src="images/t1-15.png" alt="t1-15" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon16" class="icon" src="images/t1-16.png" alt="t1-16" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon17" class="icon" src="images/t1-17.png" alt="t1-17" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon18" class="icon" src="images/t1-18.png" alt="t1-18" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon19" class="icon" src="images/t1-19.png" alt="t1-19" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon20" class="icon" src="images/t1-20.png" alt="t1-20" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon21" class="icon" src="images/t1-21.png" alt="t1-21" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+            </div>
 
-<div id="toolTip">
-    <p id="masteryName">Cycle of Violence</p>
-    <img id="smallIcon" src="images/t1-0.png" alt="t1-0" >
-    <p id="rankText">Required Rank: 5 <i>★</i></p>
-    <p id="masteryDef">
-        Has a 30% chance of decreasing the cooldown of a random skill 
-        by 1 turn if the damage inflicted by a skill exceeds 30% of the 
-        target's max HP. Occurs once per turn.
-    </p>
-    <p id="unlock">30 X Unlock</p>
-</div>
+            <div class="treeBox tree2">
+                <img id="icon0" class="icon" src="images/t2-0.png" alt="t2-0" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon1" class="icon" src="images/t2-1.png" alt="t2-1" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon2" class="icon" src="images/t2-2.png" alt="t2-2" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon3" class="icon" src="images/t2-3.png" alt="t2-3" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon4" class="icon" src="images/t2-4.png" alt="t2-4" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon5" class="icon" src="images/t2-5.png" alt="t2-5" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon6" class="icon" src="images/t2-6.png" alt="t2-6" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon7" class="icon" src="images/t2-7.png" alt="t2-7" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon8" class="icon" src="images/t2-8.png" alt="t2-8" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon9" class="icon" src="images/t2-9.png" alt="t2-9" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon10" class="icon" src="images/t2-10.png" alt="t2-10" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon11" class="icon" src="images/t2-11.png" alt="t2-11" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon12" class="icon" src="images/t2-12.png" alt="t2-12" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon13" class="icon" src="images/t2-13.png" alt="t2-13" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon14" class="icon" src="images/t2-14.png" alt="t2-14" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon15" class="icon" src="images/t2-15.png" alt="t2-15" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon16" class="icon" src="images/t2-16.png" alt="t2-16" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon17" class="icon" src="images/t2-17.png" alt="t2-17" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon18" class="icon" src="images/t2-18.png" alt="t2-18" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon19" class="icon" src="images/t2-19.png" alt="t2-19" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon20" class="icon" src="images/t2-20.png" alt="t2-20" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon21" class="icon" src="images/t2-21.png" alt="t2-21" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+            </div>
 
-<div class="flexContainer" id="loadScreen">
-    <div id="loadBuilds">
-        <button onclick="closeLoadBuilds()">Cancel</button>
+            <div class="treeBox tree3">
+                <img id="icon0" class="icon" src="images/t3-0.png" alt="t3-0" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon1" class="icon" src="images/t3-1.png" alt="t3-1" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon2" class="icon" src="images/t3-2.png" alt="t3-2" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon3" class="icon" src="images/t3-3.png" alt="t3-3" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon4" class="icon" src="images/t3-4.png" alt="t3-4" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon5" class="icon" src="images/t3-5.png" alt="t3-5" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon6" class="icon" src="images/t3-6.png" alt="t3-6" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon7" class="icon" src="images/t3-7.png" alt="t3-7" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon8" class="icon" src="images/t3-8.png" alt="t3-8" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon9" class="icon" src="images/t3-9.png" alt="t3-9" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon10" class="icon" src="images/t3-10.png" alt="t3-10" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon11" class="icon" src="images/t3-11.png" alt="t3-11" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon12" class="icon" src="images/t3-12.png" alt="t3-12" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon13" class="icon" src="images/t3-13.png" alt="t3-13" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon14" class="icon" src="images/t3-14.png" alt="t3-14" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon15" class="icon" src="images/t3-15.png" alt="t3-15" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon16" class="icon" src="images/t3-16.png" alt="t3-16" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon17" class="icon" src="images/t3-17.png" alt="t3-17" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon18" class="icon" src="images/t3-18.png" alt="t3-18" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon19" class="icon" src="images/t3-19.png" alt="t3-19" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon20" class="icon" src="images/t3-20.png" alt="t3-20" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+                <img id="icon21" class="icon" src="images/t3-21.png" alt="t3-21" onclick="btnClick(this)"
+                    onmousemove="showDesc(this, event)" onmouseout="hideDesc(event)"></img>
+            </div>
+
+        </div>
+
+        <div id="toolTip">
+            <p id="masteryName">Cycle of Violence</p>
+            <img id="smallIcon" src="images/t1-0.png" alt="t1-0">
+            <p id="rankText">Required Rank: 5 <i>★</i></p>
+            <p id="masteryDef">
+                Has a 30% chance of decreasing the cooldown of a random skill
+                by 1 turn if the damage inflicted by a skill exceeds 30% of the
+                target's max HP. Occurs once per turn.
+            </p>
+            <p id="unlock">30 X Unlock</p>
+        </div>
     </div>
-</div>
+
+
+
+    <div class="flexContainer" id="loadScreen">
+        <div id="loadBuilds">
+            <button onclick="closeLoadBuilds()">Cancel</button>
+        </div>
+    </div>
 
 
 </body>
 
 <script src="masteries.js"></script>
+
 </html>
