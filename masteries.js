@@ -1,6 +1,7 @@
 var btnStatusTree1 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 var btnStatusTree2 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 var btnStatusTree3 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+var flexContainer = document.getElementById("loadScreen");
 
 function btnClick(elem) {
 
@@ -55,32 +56,33 @@ function saveBuild(){
   localStorage.setItem( newBuild + '1', tree1 );
   localStorage.setItem( newBuild + '2', tree2 );
   localStorage.setItem( newBuild + '3', tree3 );
+
+  // Profil eklendi mesajı eklenecek  
 }
 
 function addBuildList(buildname){
   // check if there is already saved profiles before
   // If there is then add new profile to the list and check if entered value is already in the list
   // else create profile list
-  if(localStorage.getItem("raidSavedMasteries") === null){
+
+ if(localStorage.getItem("raidSavedMasteries") === null){
     //store new build
     localStorage.setItem("raidSavedMasteries", buildname);
     alert(buildname + ' isimli profil saklandı');
-  }
-  else{
-    // get all build list
+  }else{
+    // get all build list as an array
     var allBuilds = localStorage.getItem("raidSavedMasteries").split(',');
 
     for(i=0; i < allBuilds.length; i++){
       // exit if there is already a build with same name
-      if( newBuild === allBuilds[i]){break;}
+      if( buildname === allBuilds[i]){break;}
       // add new build to the build list
-      if(allBuilds.length === i ){
-        allBuilds.push(newBuild);
+      if(allBuilds.length -1 === i ){
+        allBuilds.push(buildname);
       }
     }
     // store all builds list
     localStorage.setItem("raidSavedMasteries", allBuilds);
-    alert(newBuild + ' isimli profil eklendi');
   }
 }
 
@@ -95,20 +97,55 @@ function loadBuild(){
   // Open build selection screen
   document.getElementById("loadScreen").classList.add("show");
 
-  var allBuilds = localStorage.getItem("raidSavedMasteries");
+  if(localStorage.getItem("raidSavedMasteries") !== null){
+    // Get all builds list as an array
+    var allBuilds = localStorage.getItem("raidSavedMasteries").split(',');
 
-  
+    // Create list item of allBuilds and add to the html
+    document.getElementById("loadBuilds").appendChild(makeUL(allBuilds));
+  }
+}
 
+function makeUL(array) {
+  // Create the list element:
+  var list = document.createElement('ul');
+
+  for (var i = 0; i < array.length; i++) {
+      // Create the list item:
+      var item = document.createElement('li');
+
+      // Set its contents:
+      item.appendChild(document.createTextNode(array[i]));
+
+      // Add it to the list:
+      list.appendChild(item);
+  }
+  // Finally, return the constructed list:
+  return list;
 }
 
 function clearBuild(){
   //tıklanan buildi bul
   //tıklanan buildi sil
+  
+}
 
+function clearAllBuilds(){
+  localStorage.clear();
+  var list = document.getElementById("loadBuilds");
+
+  while (list.hasChildNodes()) {  
+    list.removeChild(list.firstChild);
+  }
 }
 
 function closeLoadBuilds(){
   document.getElementById("loadScreen").classList.remove("show");
+}
+
+flexContainer.onclick = function(){
+  if(event.target = flexContainer){flexContainer.classList.remove("show");}
+  
 }
 
 
