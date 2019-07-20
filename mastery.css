@@ -44,40 +44,7 @@ body {
     border: none;
     padding: 5px 0px;
 }
-.modal{
-    width: 100%;
-    height: 100px;
-    background-color: rgba(0, 0, 0, 0.5);
-}
 
-#loadBuilds {
-    font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 15px;
-    background-color: white;
-    width: 60vw;
-    height: 50vh;
-    border: 2px solid black;
-    z-index: 102;
-    opacity: 1;
-}
-
-.flexContainer {
-    top: 0px;
-    left: 0px;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-    visibility: hidden;
-    z-index: 101;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.flexContainer.show {
-    visibility: visible;
-}
 
 #treeWrapper{
     position: relative;
@@ -106,6 +73,83 @@ body {
     position: absolute;
     opacity: 1;
 }
+
+/* -------------------------------------Load Modal Start--------------------------------------------- */ 
+.modal{
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#loadBuilds {
+    font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    background-color: white;
+    width: 60vw;
+    height: 50vh;
+    z-index: 102;
+    opacity: 1;
+}
+
+.flexContainer {
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    visibility: hidden;
+    z-index: 101;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.flexContainer.show {
+    visibility: visible;
+}
+
+#modalHeader {
+    font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(87, 156, 243);
+    color: white;
+    padding: 1em;
+  }
+  
+  #modalFooter {
+    font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(225, 225, 225);
+    color: white;
+    padding: 1em;
+    display: flex;
+    justify-content: flex-end;
+    
+  }
+
+div > ul{
+    font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+   
+  }
+  
+  ul > li{
+    margin: 0px;
+    padding: 10px;
+    height: 1em;
+  }
+  
+  
+  ul > li:nth-child(odd){
+   background-color: rgb(225, 225, 225);
+  }
+  
+  
+  ul > li:hover{
+    background-color: rgb(200, 200, 200);
+  }
+ /* -------------------------------------Load Modal End--------------------------------------------- */ 
 
 /* -------------------------------------Tool Tip Start--------------------------------------------- */
 

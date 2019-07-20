@@ -2,6 +2,7 @@ var btnStatusTree1 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 var btnStatusTree2 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 var btnStatusTree3 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 var flexContainer = document.getElementById("loadScreen");
+var loadBuilds  = document.getElementById("loadBuilds");
 
 function btnClick(elem) {
 
@@ -88,15 +89,26 @@ function addBuildList(buildname){
 
 function loadBuild(){
 
-  //load ekranını aç
-  //kayıtlı build listesini al
-  //kayıtlı build listesini tablo/liste olarak göster
-  //seçimi algıla
-  //seçimi uygula
+  //todo load ekranını aç - done
+  //TODO eski listeyi temizle - done
+  //todo kayıtlı build listesini al - done
+  //todo kayıtlı build listesini tablo/liste olarak göster - done
+  //todo listeye bir css stili ekle
+  //todo seçimi algıla
+  //todo seçimi uygula
 
   // Open build selection screen
   document.getElementById("loadScreen").classList.add("show");
 
+  // Clearing old list elements
+  for(i = 0; i < loadBuilds.children.length ; i++){
+    if(loadBuilds.children[i].tagName === "UL"){
+      loadBuilds.removeChild(loadBuilds.children[i]);
+    }
+  }
+
+
+//Creating list element
   if(localStorage.getItem("raidSavedMasteries") !== null){
     // Get all builds list as an array
     var allBuilds = localStorage.getItem("raidSavedMasteries").split(',');
@@ -143,8 +155,9 @@ function closeLoadBuilds(){
   document.getElementById("loadScreen").classList.remove("show");
 }
 
+//Close load modal
 flexContainer.onclick = function(){
-  if(event.target = flexContainer){flexContainer.classList.remove("show");}
+  if(event.target === flexContainer){flexContainer.classList.remove("show");}
   
 }
 
