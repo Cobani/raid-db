@@ -98,8 +98,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     visibility: hidden;
     z-index: 101;
     background-color: rgba(0, 0, 0, 0.5);
@@ -149,6 +149,15 @@ div > ul{
   ul > li:hover{
     background-color: rgb(200, 200, 200);
   }
+
+  #cancelBtn{
+    font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #fffffe;
+    width: 100px;
+    height: 30px;
+    margin: 0px;
+}
+
  /* -------------------------------------Load Modal End--------------------------------------------- */ 
 
 /* -------------------------------------Tool Tip Start--------------------------------------------- */

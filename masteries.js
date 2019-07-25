@@ -1,7 +1,7 @@
 var btnStatusTree1 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 var btnStatusTree2 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 var btnStatusTree3 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-var flexContainer = document.getElementById("loadScreen");
+
 var loadBuilds  = document.getElementById("loadBuilds");
 
 function btnClick(elem) {
@@ -46,7 +46,7 @@ function saveBuild(){
   // Get input name
   var newBuild = document.getElementById("championname").value;
 
-  if(newBuild){
+  if(newBuild.trim()){
     // add to build list
     addBuildList(newBuild);
     
@@ -71,25 +71,29 @@ function addBuildList(buildname){
   // If there is then add new profile to the list and check if entered value is already in the list
   // else create profile list
 
- if(localStorage.getItem("raidSavedMasteries") === null){
-    //store new build
-    localStorage.setItem("raidSavedMasteries", buildname);
-    alert(buildname + ' isimli profil saklandı');
-  }else{
-    // get all build list as an array
-    var allBuilds = localStorage.getItem("raidSavedMasteries").split(',');
-
-    for(i=0; i < allBuilds.length; i++){
-      // exit if there is already a build with same name
-      if( buildname === allBuilds[i]){break;}
-      // add new build to the build list
-      if(allBuilds.length -1 === i ){
-        allBuilds.push(buildname);
+    if(localStorage.getItem("raidSavedMasteries") === null){
+      //store new build
+      localStorage.setItem("raidSavedMasteries", buildname);
+      alert(buildname + ' profile saved.');
+    }else{
+      // get all build list as an array
+      var allBuilds = localStorage.getItem("raidSavedMasteries").split(',');
+  
+      for(i=0; i < allBuilds.length; i++){
+        // exit if there is already a build with same name
+        if( buildname === allBuilds[i]){
+          break;
+        }
+        // add new build to the build list
+        if(allBuilds.length -1 === i ){
+          allBuilds.push(buildname);
+          alert(buildname + ' profile saved.');
+        }
       }
+      // store all builds list
+      localStorage.setItem("raidSavedMasteries", allBuilds);
     }
-    // store all builds list
-    localStorage.setItem("raidSavedMasteries", allBuilds);
-  }
+
 }
 
 function loadBuild(){
@@ -98,7 +102,7 @@ function loadBuild(){
   //TODO eski listeyi temizle - done
   //todo kayıtlı build listesini al - done
   //todo kayıtlı build listesini tablo/liste olarak göster - done
-  //todo listeye bir css stili ekle
+  //todo listeye bir css stili ekle - done
   //todo seçimi algıla
   //todo seçimi uygula
 
@@ -126,6 +130,12 @@ function loadBuild(){
 function makeUL(array) {
   // Create the list element:
   var list = document.createElement('ul');
+  list.setAttribute('id', 'profiles');
+
+  // Load clicked profile
+  list.onclick = function(){
+    showSelectedBuild(event.target);
+  }
 
   for (var i = 0; i < array.length; i++) {
       // Create the list item:
@@ -133,6 +143,8 @@ function makeUL(array) {
 
       // Set its contents:
       item.appendChild(document.createTextNode(array[i]));
+      // Add class to newly created li element to call it later
+      
 
       // Add it to the list:
       list.appendChild(item);
@@ -161,10 +173,28 @@ function closeLoadBuilds(){
 }
 
 //Close load modal
+var flexContainer = document.getElementById("loadScreen");
 flexContainer.onclick = function(){
+  //alert(event.target.innerText);
   if(event.target === flexContainer){flexContainer.classList.remove("show");}
 }
 
+
+// Load clicked profile
+function showSelectedBuild(e){
+
+  var tree1 = localStorage.getItem(e.innerText + 1).split(',');
+  var tree2 = localStorage.getItem(e.innerText + 2).split(',');
+  var tree3 = localStorage.getItem(e.innerText + 3).split(',');
+
+  var icons1 = document.getElementsByClassName("treeBox tree1");
+
+  for(i=0; i < icons1.length; i++){
+    if(tree1[i] === 1){
+      icons1[i].classList.add("show");
+    }
+  }
+}
 
 //------------------------------------- Set-Get-Erase Cookies End------------------------
 
