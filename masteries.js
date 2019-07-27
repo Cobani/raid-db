@@ -189,9 +189,40 @@ function showSelectedBuild(e){
 
   var icons1 = document.getElementsByClassName("treeBox tree1");
 
-  for(i=0; i < icons1.length; i++){
-    if(tree1[i] === 1){
-      icons1[i].classList.add("show");
+  for(i=0; i < tree1.length; i++){
+    if(tree1[i] == 1){
+      icons1[0].children[i].classList.add("show");
+    }else{
+      icons1[0].children[i].classList.remove("show");
+    }
+  }
+
+  for(i=0; i < tree2.length; i++){
+    if(tree2[i] == 1){
+      icons2[0].children[i].classList.add("show");
+    }else{
+      icons2[0].children[i].classList.remove("show");
+    }
+  }
+
+  for(i=0; i < tree2.length; i++){
+    if(tree2[i] == 1){
+      icons2[0].children[i].classList.add("show");
+    }else{
+      icons2[0].children[i].classList.remove("show");
+    }
+  }
+
+ 
+}
+
+function clearScreen(){
+  var icons = document.getElementsByClassName("treeBox");
+
+  for(x of icons){
+    
+    for(e of x.children){
+      e.classList.remove("show");
     }
   }
 }
